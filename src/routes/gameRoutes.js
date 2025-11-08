@@ -4,7 +4,7 @@ const router = express.Router();
 const Game = require('../models/Game');
 
 // Obtener todos los juegos
-router.get('/', async (req, res) => {
+router.get('/', async (_req, res) => {
   try {
     const games = await Game.find();
     res.json(games);
