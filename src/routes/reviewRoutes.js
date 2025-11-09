@@ -3,7 +3,7 @@ const router = express.Router();
 const Review = require('../models/Review');
 
 // Obtener todas las reseñas
-router.get('/', async (req, res) => {
+router.get('/', async (_req, res) => {
   const reviews = await Review.find().populate('gameId');
   res.json(reviews);
 });
